@@ -11,8 +11,8 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="cloud-provider-payment8001" target="1.5" />
-      <module name="mscloud" target="1.5" />
+      <module name="cloud-provider-payment8001" target="1.8" />
+      <module name="mscloud" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
