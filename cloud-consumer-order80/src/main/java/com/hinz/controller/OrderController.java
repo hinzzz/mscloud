@@ -1,4 +1,4 @@
-package com.hinz.config.springcloud.controller;
+package com.hinz.controller;
 
 
 import com.hinz.entities.CommonResult;
