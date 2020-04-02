@@ -42,6 +42,7 @@ public class PaymentController
     @GetMapping(value = "/payment/get/{id}")
     public CommonResult<Payment> getPaymentById(@PathVariable("id") Long id)
     {
+        System.out.println("线程池：" + Thread.currentThread().getName() + "   paymentInfo_OK,id：  " + String.valueOf(id) + "\t" + "哈哈哈");
         Payment payment = paymentService.getPaymentById(id);
 
         if(payment != null)
