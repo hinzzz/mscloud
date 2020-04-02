@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 
@@ -51,6 +52,15 @@ public class PaymentController
         }
     }
 
+    @PostMapping("/testMap")
+    public CommonResult<Map> testMap(@RequestBody Map<String,String> map){
+        try {
+            TimeUnit.SECONDS.sleep(3);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return new CommonResult(200,"查询成功,serverPort:  "+serverPort,map);
+    }
 
 
     @GetMapping(value = "/payment/lb")
