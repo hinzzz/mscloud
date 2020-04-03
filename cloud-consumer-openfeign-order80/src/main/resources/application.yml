@@ -11,8 +11,5 @@ spring:
     name: openfeign-consumer-service
 
 
-#超时等待
-ribbon:
-  ReadTimeout:  5000
-  ConnectTimeout: 5000
+
 

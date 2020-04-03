@@ -2,6 +2,8 @@ package com.hinz.controller;
 
 import com.hinz.entities.CommonResult;
 import com.hinz.service.PaymentService;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,21 +24,24 @@ public class PaymentController {
 
     @GetMapping("/payment/hystrix/ok/{id}")
     public CommonResult paymentInfo_OK(@PathVariable("id") Integer id){
-        String result = paymentService.paymentInfo_OK(id);
-        log.info("*******result:"+result);
-        return new CommonResult(200,result);
-    }
 
+       return paymentService.paymentInfo_OK(id);
+    }
+    //失败
+    @HystrixCommand(fallbackMethod = "paymentInfo_TimeOutHandler",commandProperties = {
+            @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds",value = "3000")  //3秒钟以内就是正常的业务逻辑
+    })
     @GetMapping("/payment/hystrix/timeout/{id}")
     public CommonResult paymentInfo_TimeOut(@PathVariable("id") Integer id){
-        //int a = 10 / 0;
-        paymentService.paymentInfo_TimeOut(id);
-        return new CommonResult(200,"aaaaa");
+        return paymentService.paymentInfo_TimeOut(id);
     }
 
-
-
-
-
+    //兜底方法
+    public CommonResult paymentInfo_TimeOutHandler(Integer id){
+        return new CommonResult(500,"线程池："+Thread.currentThread().getName()+"   系统繁忙, 请稍候再试  ,id：  "+id+"\t"+"哭了哇呜");
+    }
 }
+
+
+ 
  
