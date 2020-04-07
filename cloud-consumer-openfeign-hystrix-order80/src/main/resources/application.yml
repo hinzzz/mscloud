@@ -16,10 +16,12 @@ eureka:
       defaultZone: http://eureka7001.com:7001/eureka/
 
 
-
+feign:
+  hystrix:
+    enabled: true
 
 #超时等待
-ribbon:
-  ReadTimeout:  5000
-  ConnectTimeout: 5000
+  #ribbon:
+  #ReadTimeout:  5000
+  #ConnectTimeout: 5000
 
