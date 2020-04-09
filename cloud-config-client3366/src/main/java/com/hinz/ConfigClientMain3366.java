@@ -2,16 +2,16 @@ package com.hinz;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.config.server.EnableConfigServer;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 /**
  * @author ：quanhz
- * @date ：Created in 2020/4/7 16:39
+ * @date ：Created in 2020/4/8 11:25
  */
+@EnableEurekaClient
 @SpringBootApplication
-@EnableConfigServer
-public class ConfigCenter3344 {
+public class ConfigClientMain3366 {
     public static void main(String[] args){
-      SpringApplication.run(ConfigCenter3344.class,args);
+      SpringApplication.run(ConfigClientMain3366.class,args);
     }
 }

@@ -24,6 +24,10 @@
       <module>cloud-consumer-openfeign-hystrix-order80</module>
       <module>cloud-sc-gateway9527</module>
       <module>cloud-config-center3344</module>
+      <module>cloud-config-client3355</module>
+        <module>cloud-center-client3366</module>
+        <module>cloud-config-client3366</module>
+
     </modules>
 
     <!-- 统一管理jar包版本 -->
