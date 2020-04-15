@@ -8,9 +8,66 @@ toc: true
 
 ## 1.概述
 
-本篇文章旨在记录本人SpringCloud学习过程并记录其中遇到的问题。
+​	从3月份开始学习SpringCloud微服务架构的基础知识，在断断续续的40多天的时间从各个组件的理论知识到相关demo的搭建，其中学习的过程和跳过的坑都记录在SpringCloud系列文章里面。由于SpringCloud组件较多，篇幅较大，遂将文章按照各组件进行拆分 方便大家的阅读。
 
-## 2.版本选择
+​	本文是SpringCloud系列的第一篇文章，着重介绍下SpringCloud的基础知识、相关特性。为后续的文章做铺垫。
+
+
+
+##  2.什么是SpringCloud
+
+> Spring Cloud provides tools for developers to quickly build some of the common patterns in distributed systems (e.g. configuration management, service discovery, circuit breakers, intelligent routing, micro-proxy, control bus, one-time tokens, global locks, leadership election, distributed sessions, cluster state). Coordination of distributed systems leads to boiler plate patterns, and using Spring Cloud developers can quickly stand up services and applications that implement those patterns. They will work well in any distributed environment, including the developer’s own laptop, bare metal data centres, and managed platforms such as Cloud Foundry.
+
+简单来说SpringCloud是一套完整微服务解决方案，基于SpringBoot，可以说他不是一个框架，而是一个容器，将市面上较成熟微服务架构集成进来，以提高开发效率。
+
+## 3.版本选择
+
+上面说到SpringCloud是基于SpringBoot，那么在开发的时候如何选择对应的版本呢？
+
+[SpringBoot版本介绍](https://spring.io/projects/spring-boot#learn)
+
+![](E:\space\mscloud\note\SpringBoot版本.png)
+
+[SpringCloud的版本介绍](https://spring.io/projects/spring-cloud#learn)
+
+![](E:\space\mscloud\note\SpringCloud版本.png)
+
+**版本号介绍**
+
+- Alpha：不建议使用，主要是以实现软件功能为主，通常只在软件开发者内部交流，Bug较多；
+- Beta：该版本相对于α版已有了很大的改进，消除了严重的错误，但还是存在着一些缺陷，需要经过多次测试来进一步消除；
+- GA：General Availability，正式版本，官方推荐使用此版本，在国外都是用GA来说明release版本；
+- M：又叫里程碑版本，表示该版本较之前版本有功能上的重大更新；
+- PRE(不建议使用)：预览版，内部测试版，主要是给开发人员和测试人员测试和找BUG用的；
+- Release：最终版本，Release不会以单词形式出现在软件封面上，取而代之的是符号(R)；
+- RC：该版本已经相当成熟了，基本上不存在导致错误的BUG，与即将发行的正式版相差无几；
+- SNAPSHOT：快照版，可以稳定使用，且仍在继续改进版本。
+
+![](E:\space\mscloud\note\SpringCloud和SpringBoot对应版本.png)
+
+在官网上已经给了大版本的选择，更详细版本选择可查看https://start.spring.io/actuator/info json返回结果。
+
+![](E:\space\mscloud\note\json版本.png)
+
+最终版本选择结果
+
+|        组件        |     版本      |
+| :----------------: | :-----------: |
+|    SpringCloud     |  Hoxton.SR3   |
+| SpringCloudAlibaba | 2.2.0.RELEASE |
+|     SpringBoot     | 2.2.6.RELEASE |
+|        JDK         |      1.8      |
+|       Maven        |     3.5.3     |
+
+
+
+
+
+## 4.各种组件的兴衰史？
+
+
+
+
 
 
 
