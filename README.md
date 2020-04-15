@@ -1,8 +1,23 @@
+---
+title: SpringCloud 2.X
+tags: SpringCloud全家桶 SpringCloudAlibaba sentinel nacos 
+categories: SpringCoud
+date: 2020/04/15
+toc: true
+---
+
+## 1.概述
+
+本篇文章旨在记录本人SpringCloud学习过程并记录其中遇到的问题。
+
+## 2.版本选择
+
+
+
 # mscloud
 
 @EnableEurekaClient 消费者
 @EnableEurekaServer 提供服务
-
 
 consul 解压路径 配置path
 consul --version
@@ -16,9 +31,9 @@ bootstrap.yml的配置会被中心配置覆盖
 系统吞吐量几个重要参数：QPS（TPS）、并发数、响应时间
 
         QPS（TPS）：（Query Per Second）每秒钟request/事务 数量
-
+    
         并发数： 系统同时处理的request/事务数
-
+    
         响应时间：  一般取平均响应时间
 
 （很多人经常会把并发数和TPS理解混淆）
