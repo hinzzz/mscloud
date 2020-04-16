@@ -1,6 +1,6 @@
 ---
 title: SpringCloud 2.X
-tags: SpringCloud全家桶 SpringCloudAlibaba sentinel nacos 
+tags: SpringCloud SpringCloudAlibaba sentinel nacos 
 categories: SpringCoud
 date: 2020/04/15
 toc: true
@@ -26,11 +26,11 @@ toc: true
 
 [SpringBoot版本介绍](https://spring.io/projects/spring-boot#learn)
 
-![](E:\space\mscloud\note\SpringBoot版本.png)
+![](note/SpringBoot版本.png)
 
 [SpringCloud的版本介绍](https://spring.io/projects/spring-cloud#learn)
 
-![](E:\space\mscloud\note\SpringCloud版本.png)
+![](note/SpringCloud版本.png)
 
 **版本号介绍**
 
@@ -43,11 +43,11 @@ toc: true
 - RC：该版本已经相当成熟了，基本上不存在导致错误的BUG，与即将发行的正式版相差无几；
 - SNAPSHOT：快照版，可以稳定使用，且仍在继续改进版本。
 
-![](E:\space\mscloud\note\SpringCloud和SpringBoot对应版本.png)
+![](note/SpringCloud和SpringBoot对应版本.png)
 
 在官网上已经给了大版本的选择，更详细版本选择可查看https://start.spring.io/actuator/info json返回结果。
 
-![](E:\space\mscloud\note\json版本.png)
+![](note/json版本.png)
 
 最终版本选择结果
 
@@ -65,9 +65,19 @@ toc: true
 
 ## 4.各种组件的兴衰史？
 
+![](note/Cloud升级.png)
 
 
 
+**停更说明**
+
+[Eureka](https://github.com/Netflix/eureka/wiki)
+
+[Hystrix](https://github.com/Netflix/Hystrix)
+
+[Zuul2](https://github.com/spring-cloud/spring-cloud-netflix/issues/2951)
+
+不适用Config和Bus 作为服务配置中心和消息总线的原因是：SpringCloudAlibaba-nacos整合了服务注册中心 服务配置 服务总线。
 
 
 
