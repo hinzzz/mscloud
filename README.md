@@ -1,10 +1,13 @@
 ---
-title: SpringCloud 2.X
-tags: SpringCloud SpringCloudAlibaba sentinel nacos 
+title: SpringCloud 2.X 系列文章导读
+tags: [SpringCloud,SpringCloudAlibaba,sentinel,nacos ]
 categories: SpringCoud
 date: 2020/04/15
-toc: true
+toc: true # 是否启用内容索引
+
 ---
+
+
 
 ## 1.概述
 
@@ -14,7 +17,7 @@ toc: true
 
 
 
-##  2.什么是SpringCloud
+##  2什么是SpringCloud
 
 > Spring Cloud provides tools for developers to quickly build some of the common patterns in distributed systems (e.g. configuration management, service discovery, circuit breakers, intelligent routing, micro-proxy, control bus, one-time tokens, global locks, leadership election, distributed sessions, cluster state). Coordination of distributed systems leads to boiler plate patterns, and using Spring Cloud developers can quickly stand up services and applications that implement those patterns. They will work well in any distributed environment, including the developer’s own laptop, bare metal data centres, and managed platforms such as Cloud Foundry.
 
@@ -26,11 +29,11 @@ toc: true
 
 [SpringBoot版本介绍](https://spring.io/projects/spring-boot#learn)
 
-![](note/SpringBoot版本.png)
+![](D:/hinzzz/blog/source/_posts/SpringCloud/note/SpringBoot版本.png)
 
 [SpringCloud的版本介绍](https://spring.io/projects/spring-cloud#learn)
 
-![](note/SpringCloud版本.png)
+![](D:/hinzzz/blog/source/_posts/SpringCloud/note/SpringCloud版本.png)
 
 **版本号介绍**
 
@@ -43,11 +46,11 @@ toc: true
 - RC：该版本已经相当成熟了，基本上不存在导致错误的BUG，与即将发行的正式版相差无几；
 - SNAPSHOT：快照版，可以稳定使用，且仍在继续改进版本。
 
-![](note/SpringCloud和SpringBoot对应版本.png)
+![](D:/hinzzz/blog/source/_posts/SpringCloud/note/SpringCloud和SpringBoot对应版本.png)
 
 在官网上已经给了大版本的选择，更详细版本选择可查看https://start.spring.io/actuator/info json返回结果。
 
-![](note/json版本.png)
+![](D:/hinzzz/blog/source/_posts/SpringCloud/note/json版本.png)
 
 最终版本选择结果
 
@@ -65,7 +68,7 @@ toc: true
 
 ## 4.各种组件的兴衰史？
 
-![](note/Cloud升级.png)
+![](D:/hinzzz/blog/source/_posts/SpringCloud/note/Cloud升级.png)
 
 
 
@@ -77,7 +80,7 @@ toc: true
 
 [Zuul2](https://github.com/spring-cloud/spring-cloud-netflix/issues/2951)
 
-不适用Config和Bus 作为服务配置中心和消息总线的原因是：SpringCloudAlibaba-nacos整合了服务注册中心 服务配置 服务总线。
+**结论：**不使用Config和Bus 作为服务配置中心和消息总线的原因是：SpringCloudAlibaba-nacos整合了服务注册中心 服务配置 服务总线。
 
 
 
